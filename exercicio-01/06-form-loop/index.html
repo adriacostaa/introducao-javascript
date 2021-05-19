@@ -5,15 +5,20 @@
     </head>
     <body>
         <h1>
-            Formulário
+            Formulário - Loop
         </h1>
-        <form>
-            <input type="text">
-            <input type="button" value="Preencher">
+        <form id="form">
+            <input type="button" id="idname" onclick="solucao()" value="Mostrar Campos"></br>
         </form>
         <script>
-           
-                            
+            function solucao() { 
+                for(var i=0;i<3;i++) {
+                    inputText = document.createElement("input");
+                    inputText.type = "text";
+                    inputText.value = "";
+                    document.getElementById('form').appendChild(inputText);
+                }
+            } 
         </script>
     </body>
     
